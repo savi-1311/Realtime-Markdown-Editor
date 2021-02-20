@@ -11,7 +11,7 @@ const handleChange = (event) => {
 
   return (
     <div className="container">
-    <div className="heading">Markdown Output:</div>
+    <div className="heading">Preview:</div>
     <div className="content"><ReactMarkdown allowDangerousHtml>{props.value}</ReactMarkdown></div>
     </div>
     );

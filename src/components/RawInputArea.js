@@ -1,26 +1,68 @@
 import './Styles.css';
 import React ,{ Component } from 'react';
 import MarkdownSanitized from './MarkdownSanitized.js';
+import { saveAs, encodeBase64 } from '@progress/kendo-file-saver';
+import {Controlled as CodeMirror} from 'react-codemirror2';
+import 'codemirror/lib/codemirror.css';
+import 'codemirror/theme/3024-day.css';
+require('codemirror/mode/xml/xml');
+require('codemirror/mode/javascript/javascript');
+require('codemirror/mode/markdown/markdown');
 
 export default function RawInputArea() {
+	const codemirrorRef = React.useRef();
+
+React.useEffect(() => {
+  const current = codemirrorRef.current.editor.display.wrapper.style.height = "1000px";
+});
 	const [textAreaValue, setValue] = React.useState(localStorage.getItem('textAreaValue'));
+	const [textFileName, setName] = React.useState("test.md");
 
 const handleChange = (event) => {
 		setValue(event.target.value);
 		localStorage.setItem('textAreaValue', event.target.value);
   }
 
+const handleChange2 = (event) => {
+		setName(event.target.value);
+  }
+
+const SaveFile = () => {
+
+		const dataURI = "data:text/plain;base64," + encodeBase64(textAreaValue);
+		saveAs(dataURI, textFileName);
+  }
+
   return (
-  	<div className="wrapper">
-    <div className="container">
-    <div className="logo2">Realtime</div>
+  	<>
+
+  	<div className="topnav">
     <div className="logo">ME</div>
     <div className="logo2">Markdown Editor!</div>
-    <div className="heading">Input Here:</div>
-    <div><textarea onChange={handleChange} value={textAreaValue}/></div>
+    </div>
+
+  	<div className="wrapper">
+    <div className="container">
+    <form>
+    <input type="text" onChange={handleChange2} value={textFileName}></input>
+    <button onClick={SaveFile}>Save</button>
+    </form>
+    <div className="code">
+	<CodeMirror value={textAreaValue} onBeforeChange={(editor, data, value) => {setValue(value);
+		localStorage.setItem('textAreaValue', value); }} options={{
+	autoCursor: false,
+    autoScroll: false,
+    mode: 'markdown',
+    theme: '3024-day',
+    lineNumbers: true,
+    lineWrapping: true
+  }} ref={codemirrorRef}/>
+  </div>
+
     </div>
     <MarkdownSanitized value = {textAreaValue}/>
     </div>
+    </>
     );
 }
 

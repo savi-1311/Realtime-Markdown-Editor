@@ -9,6 +9,11 @@
   height: 100vh;
   background-color: midnightblue;
 }
+.topnav
+{
+  background-color: black;
+  padding: 1%;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

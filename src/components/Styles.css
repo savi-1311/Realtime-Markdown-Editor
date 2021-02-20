@@ -7,7 +7,7 @@
   text-align: left;
   font-family: 'RocknRoll One', sans-serif;
   font-weight: bold;
-  font-size: 8vh;
+  font-size: 4vh;
 }
 
 .logo2
@@ -16,7 +16,7 @@
   text-align: left;
   font-family: 'RocknRoll One', sans-serif;
   font-weight: bold;
-  font-size: 2vh;
+  font-size: 1vh;
 }
 
 .heading
@@ -25,34 +25,67 @@
   color: black;
   background-color: mediumspringgreen;
   text-align: left;
-  font-family: 'Benne', serif;
-  padding: 2%;
   font-weight: bold;
-  font-size: 3vh;
+  padding:1%;
+  font-size: 2vh;
+  border-radius: 10%;
 }
 .container
 {
   padding: 1%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   width: 100%;
-  background-color: black;
+  background-color: white;
+}
+
+button
+{
+  margin: 1% auto;
+  color: black;
+  background-color: mediumspringgreen;
+  text-align: left;
+  font-weight: bold;
+  font-size: 2vh;
+  border: none;
+  padding:1%;
+  border-radius: 10%;
+}
+button : hover
+{
+  cursor: pointer;
 }
 
 .content
 {
 	border: 5px solid mediumspringgreen;
-	height: 100%;
+	height: 90%;
 	padding: 2%;
-	background-color:lightcyan;
+	background-color:white;
 	overflow: scroll;
+	max-width: 1000px;
 }
-textarea
+.code
 {
-	overflow: auto;
-	outline: none;
-   width: 100%;
-  height: 60vh;
+ overflow: auto;
+ outline: none;
+  width: 100%;
+  height: 90vh;
   padding:1%;
+  border: none;
+  line-height: 1.8;
+  max-width: 900px;
+}
+input
+{
+ margin: 1% auto;
+  color: black;
+  text-align: left;
+  font-weight: bold;
+  font-size: 2vh;
+  border: none;
+  border-bottom: 2px solid mediumspringgreen ;
+  padding:1%;
+  outline: none;
 }
