@@ -14,7 +14,8 @@ The website is hosted [here](https://savi-1311.github.io/Realtime-Markdown-Edito
 
 ### Screenshots
 
-![image](https://user-images.githubusercontent.com/56017960/109375851-fb117000-78e5-11eb-9276-50cd81f32d31.png)
+![image](https://user-images.githubusercontent.com/56017960/109375888-4fb4eb00-78e6-11eb-9038-de165aa54939.png)
+
 
 ***
 
