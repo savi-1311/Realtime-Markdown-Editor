@@ -14,7 +14,10 @@ The website is hosted [here](https://savi-1311.github.io/Realtime-Markdown-Edito
 
 ### Screenshots
 
-![image](https://user-images.githubusercontent.com/56017960/109375888-4fb4eb00-78e6-11eb-9038-de165aa54939.png)
+![image](https://user-images.githubusercontent.com/56017960/109376507-e71c3d00-78ea-11eb-8838-920f3191be06.png)
+
+![image](https://user-images.githubusercontent.com/56017960/109376514-f602ef80-78ea-11eb-8488-89ef93428e24.png)
+
 
 
 ***
@@ -40,5 +43,3 @@ The website is hosted [here](https://savi-1311.github.io/Realtime-Markdown-Edito
     The server will reun on http://localhost:3000
 ***
 
-### Todo
-* Add an option to change the theme.
